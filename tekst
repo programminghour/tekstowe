@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+string upp(string i)
+{
+    for(int j=0; j<i.length();j++)
+         i[j]=toupper(i[j]);
+        return i;
+}
+
+int main()
+{
+    string i;
+
+    cin>>i;
+
+    cout << upp(i) << endl;
+    return 0;
+}
