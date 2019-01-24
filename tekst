@@ -11,12 +11,42 @@ string upp(string i)
         return i;
 }
 
+string change(string i)
+{
+
+    i[i.find('a')]='b';
+    return i;
+
+}
+
+string write(string s, string s1)
+{
+    string x="";
+    int k=0;
+    while(k!=-1)    //bo wtedy znaczy ze nie znalazl
+    {
+        k=s.find('a');
+        if(k!=-1)
+        {
+            x+=s.substr(0,k) +s1;
+            s=s.substr(k+1,s.length()-k);
+        }
+        else
+            x+=s;
+
+       // s.erase(0,s.length()-k);
+    }
+
+
+    return x;
+}
+
 int main()
 {
-    string i;
+    string i,o;
 
-    cin>>i;
+    cin>>i>>o;
 
-    cout << upp(i) << endl;
+    cout <<write(i,o) << endl;
     return 0;
 }
